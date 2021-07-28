@@ -18,11 +18,4 @@ describe("Manager", () => {
       expect(manager.office_ext).toBe("0245");
     });
   });
-  // describe("Manger class method", () => {
-  //   it("should provide 4 questions in the array", () => {
-  //     const arrayLength = Manager.questions().length;
-  //     console.log(arrayLength);
-  //     expect(arrayLength).toBe(4);
-  //   });
-  // });
 });
