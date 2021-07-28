@@ -16,5 +16,19 @@ describe("Employee", () => {
       expect(employee.id).toBe("34");
       expect(employee.email).toBe("sd@abc.xyz");
     });
+
+    describe("Employee class method", () => {
+      it("should provide a total of 4 items in a question array", () => {
+        const arrayLength = Employee.questions().length;
+
+        expect(arrayLength).toBe(4);
+      });
+      it("should have the second question as 'Enter employee's name:'", () => {
+        const secondQuestion = Employee.questions()[1];
+        const expectedQuestion = `Enter employee's name:`;
+
+        expect(secondQuestion).toBe(expectedQuestion);
+      });
+    });
   });
 });
