@@ -4,7 +4,7 @@
 
 <h2>Description</h2>
 
-This App can generate a summary profile of a software engineering team based on member's role. The CLI input interface is built upon npm package [inquirer](https://www.npmjs.com/package/inquirer).The app is constructed following OOP and TDD practices.
+This App can generate a summary profile of a software engineering team based on member's role. The CLI input interface is built upon npm package [inquirer](https://www.npmjs.com/package/inquirer). The app is constructed following OOP and TDD practices.
 
 <h2>Table of Contents</h2>
 <ul> 
@@ -20,7 +20,7 @@ This App can generate a summary profile of a software engineering team based on 
 - Ability to show entire team profile and contact information in html immediately after the build
 
 <h2 id="plan">Development plan</h2>
-Based on OOP, there are 5 classes to be deployed, with the main class is Employee and its 3 subclasses: Manger, Engineer and Intern, as well as an independent class named Team. These classes are responsible to compose a team through generating instances, which are based on the user input. These classes will be built incrementally using TDD. To unit-test the actual user input which is subsequently used by the receiving function, I will need to mock the external dependency inquirer to simulate the data flow. The goal is to first fail-test incrementally all internal functions, following which they will be written to be functional. Finally, the code will be refactored.
+Based on OOP, there are 5 classes to be deployed, with the main class Employee and its 3 subclasses: Manger, Engineer and Intern, as well as an independent class named Team. These classes are responsible to compose a team through generating instances, which are based on the user input. These classes will be built incrementally using TDD. To unit-test the actual user input which is subsequently used by the receiving function, I will need to mock the external dependency inquirer to simulate the data flow. The goal is to first fail-test incrementally all internal functions, following which they will be written to be functional. Finally, the code will be refactored.
 
 <h2 id="install">Installation</h2>
 The entire App can be downloaded using git clone or zip method. Please run npm install to restore necessary node modules.
