@@ -11,11 +11,13 @@ describe("Manager", () => {
       // Act
       const manager = new Manager(name, id, email, office_ext);
       // Assert
-      expect(manager.position).toBe("manager");
-      expect(manager.name).toBe("Sarah Lee");
-      expect(manager.id).toBe("01092");
-      expect(manager.email).toBe("sl@luv.ya");
-      expect(manager.office_ext).toBe("0245");
+      expect(manager).toEqual({
+        position: "manager",
+        name: "Sarah Lee",
+        id: "01092",
+        email: "sl@luv.ya",
+        office_ext: "0245",
+      });
     });
   });
 });

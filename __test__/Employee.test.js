@@ -11,10 +11,12 @@ describe("Employee", () => {
       // Act
       const employee = new Employee(position, name, id, email);
       // Assert
-      expect(employee.position).toBe("manager");
-      expect(employee.name).toBe("Sue Doe");
-      expect(employee.id).toBe("00012");
-      expect(employee.email).toBe("sd@abc.xyz");
+      expect(employee).toEqual({
+        position: "manager",
+        name: "Sue Doe",
+        id: "00012",
+        email: "sd@abc.xyz",
+      });
     });
 
     describe("Employee class method", () => {

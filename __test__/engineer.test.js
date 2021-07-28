@@ -11,11 +11,13 @@ describe("engineer", () => {
       // Act
       const engineer = new Engineer(name, id, email, github);
       // Assert
-      expect(engineer.position).toBe("engineer");
-      expect(engineer.name).toBe("Bob T");
-      expect(engineer.id).toBe("01254");
-      expect(engineer.email).toBe("bt@so.nice");
-      expect(engineer.github).toBe("https://www.github.com/bobt");
+      expect(engineer).toEqual({
+        position: "engineer",
+        name: "Bob T",
+        id: "01254",
+        email: "bt@so.nice",
+        github: "https://www.github.com/bobt",
+      });
     });
   });
 });

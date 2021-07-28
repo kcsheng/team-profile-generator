@@ -10,11 +10,13 @@ describe("Intern", () => {
       // Act
       const intern = new Intern(name, id, email, school);
       // Assert
-      expect(intern.position).toBe("intern");
-      expect(intern.name).toBe("Sharma Moska");
-      expect(intern.id).toBe("04562");
-      expect(intern.email).toBe("sm@rty.cool");
-      expect(intern.school).toBe("Monash University");
+      expect(intern).toEqual({
+        position: "intern",
+        name: "Sharma Moska",
+        id: "04562",
+        email: "sm@rty.cool",
+        school: "Monash University",
+      });
     });
   });
 });
