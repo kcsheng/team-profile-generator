@@ -1,5 +1,6 @@
 const Employee = require("../lib/employee");
 const inquirer = require("inquirer");
+const employeesRawData = [];
 
 const askQuestionsBy = (position) => {
   const questions = [];
@@ -24,8 +25,31 @@ const askQuestionsBy = (position) => {
       },
     });
   }
+
+  questions.push({
+    type: "rawlist",
+    name: "further_action",
+    choices: ["Add an engineer.", "Add an intern.", "Finish team building."],
+  });
   return questions;
 };
 
-let questions = askQuestionsBy("engineer");
-inquirer.prompt(questions).then((data) => console.log(data));
+const addEmployee = (position) => {
+  inquirer
+    .prompt(askQuestionsBy(position))
+    .then((data) => {
+      employeesRawData.push(data);
+      if (data.further_action === "Add an engineer.") {
+        addEmployee("engineer");
+      } else if (data.further_action === "Add an intern.") {
+        addEmployee("intern");
+      } else {
+        return employeesRawData;
+      }
+    })
+    .catch((error) => console.error(error));
+};
+
+const getData = () => addEmployee("manager");
+
+module.exports = getData;
