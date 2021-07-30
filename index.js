@@ -1,6 +1,18 @@
 const Employee = require("./lib/employee");
+const Manager = require("./lib/manager");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
 const inquirer = require("inquirer");
 const employeesRawData = [];
+
+const createTeam = (rawData) => {
+  const members = rawData.map((member) => {
+    const [name, id, email, extraProp, , position] = Object.values(member);
+    const positionCap = position.charAt(0).toUpperCase() + position.slice(1);
+    return eval(`new ${positionCap}(name, id, email, extraProp, position)`);
+  });
+  return members;
+};
 
 const askQuestionsBy = (position) => {
   const questions = [];
@@ -34,22 +46,22 @@ const askQuestionsBy = (position) => {
   return questions;
 };
 
-const addEmployee = (position) => {
+const addEmployee = (position) =>
   inquirer
     .prompt(askQuestionsBy(position))
     .then((data) => {
+      data.position = position;
       employeesRawData.push(data);
       if (data.further_action === "Add an engineer.") {
         addEmployee("engineer");
       } else if (data.further_action === "Add an intern.") {
         addEmployee("intern");
       } else {
-        return employeesRawData;
+        console.log(employeesRawData);
       }
     })
     .catch((error) => console.error(error));
-};
 
 // addEmployee("manager");
 
-module.exports = { addEmployee, askQuestionsBy, employeesRawData };
+module.exports = { addEmployee, askQuestionsBy, createTeam };
