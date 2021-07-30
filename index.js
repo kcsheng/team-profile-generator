@@ -2,6 +2,7 @@ const Employee = require("./lib/employee");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
+const fs = require("fs");
 const inquirer = require("inquirer");
 const employeesRawData = [];
 
@@ -11,7 +12,14 @@ const createTeam = (rawData) => {
     const positionCap = position.charAt(0).toUpperCase() + position.slice(1);
     return eval(`new ${positionCap}(name, id, email, extraProp, position)`);
   });
-  return members;
+  return new Team(members);
+};
+
+const createHTML = (filePath, team) => {
+  fs.writeFile(filePath, writeHTML(team), (err) => {
+    if (err) throw Error(err);
+    console.log("Team created in HTML!");
+  });
 };
 
 const askQuestionsBy = (position) => {
