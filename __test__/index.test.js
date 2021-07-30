@@ -40,8 +40,16 @@ describe("index", () => {
           intern_id: "34512",
           intern_email: "cs@gmail.it",
           intern_school: "RMIT University",
-          further_action: "Finish team building.",
+          further_action: "Add an engineer.",
           position: "intern",
+        },
+        {
+          engineer_name: "Tim Maxx",
+          engineer_id: "33213",
+          engineer_email: "tm@google.it",
+          engineer_github: "https://www.github.com/tmaxx",
+          further_action: "Finish team building.",
+          position: "engineer",
         },
       ];
 
@@ -59,6 +67,13 @@ describe("index", () => {
           id: "34512",
           email: "cs@gmail.it",
           school: "RMIT University",
+        },
+        {
+          position: "engineer",
+          name: "Tim Maxx",
+          id: "33213",
+          email: "tm@google.it",
+          github: "https://www.github.com/tmaxx",
         },
       ];
 
