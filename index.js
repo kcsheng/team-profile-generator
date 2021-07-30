@@ -2,6 +2,7 @@ const Employee = require("./lib/employee");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
+const Team = require("./lib/team");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const employeesRawData = [];

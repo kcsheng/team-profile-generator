@@ -53,29 +53,31 @@ describe("index", () => {
         },
       ];
 
-      const teamObject = [
-        {
-          position: "manager",
-          name: "John Jackson",
-          id: "31454",
-          email: "jj@cute.me",
-          office_ext: "3451",
-        },
-        {
-          position: "intern",
-          name: "Chris Smith",
-          id: "34512",
-          email: "cs@gmail.it",
-          school: "RMIT University",
-        },
-        {
-          position: "engineer",
-          name: "Tim Maxx",
-          id: "33213",
-          email: "tm@google.it",
-          github: "https://www.github.com/tmaxx",
-        },
-      ];
+      const teamObject = {
+        members: [
+          {
+            position: "manager",
+            name: "John Jackson",
+            id: "31454",
+            email: "jj@cute.me",
+            office_ext: "3451",
+          },
+          {
+            position: "intern",
+            name: "Chris Smith",
+            id: "34512",
+            email: "cs@gmail.it",
+            school: "RMIT University",
+          },
+          {
+            position: "engineer",
+            name: "Tim Maxx",
+            id: "33213",
+            email: "tm@google.it",
+            github: "https://www.github.com/tmaxx",
+          },
+        ],
+      };
 
       expect(createTeam(rawData)).toEqual(teamObject);
     });
