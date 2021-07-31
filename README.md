@@ -31,6 +31,8 @@ The entire App can be downloaded using git clone or zip method. Please run npm i
 
 <h2 id="demo">Demo</h2>
 
+Click [here](./dist/assets/img/demo.gif) to restart demo in a separate window.
 ![demo of the app](./dist/assets/img/demo.gif)
 
+HTML result sample
 ![screenshot of html result](./dist/assets/img/demo.png)
