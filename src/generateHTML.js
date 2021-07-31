@@ -63,4 +63,4 @@ const writeHTML = (team) => {
   return finalLayout;
 };
 
-module.exports = writeHTML;
+module.exports = { writeHTML, capitalise };

@@ -3,7 +3,7 @@ const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Team = require("./lib/team");
-const writeHTML = require("./src/generateHTML");
+const { writeHTML, capitalise } = require("./src/generateHTML");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const employeesRawData = [];
@@ -11,7 +11,7 @@ const employeesRawData = [];
 const createTeam = (rawData) => {
   const members = rawData.map((member) => {
     const [name, id, email, extraProp, , position] = Object.values(member);
-    const positionCap = position.charAt(0).toUpperCase() + position.slice(1);
+    const positionCap = capitalise(position);
     return eval(`new ${positionCap}(name, id, email, extraProp, position)`);
   });
   return new Team(members);
