@@ -20,7 +20,7 @@ This App can generate a summary profile of a software engineering team based on 
 - Ability to show entire team profile and contact information in html immediately after the build
 
 <h2 id="plan">Development plan</h2>
-This app is contrcuted based on OOP. Five classes including employee, manager, engineer, intern and team are used to create instances based on user input. Classes are built incrementally along with TDD. To unit-test the actual user input which is subsequently used by the receiving function, I will need to mock the external dependency inquirer to simulate the data flow. Functions/classes are established incrementally with the corresponding tests. Once passing the tests, the code must be refactored without breaking the app.
+This app is contructed based on OOP. Five classes including employee, manager, engineer, intern and team are used to create instances based on user input. Classes are built incrementally along with TDD. To unit-test the actual user input which is subsequently used by the receiving function, I will need to mock the external dependency inquirer to simulate the data flow. Functions/classes are established incrementally with the corresponding tests. Once passing the tests, the code must be refactored without breaking the app.
 
 <h2 id="install">Installation</h2>
 The entire App can be downloaded using git clone or zip method. Please run npm install to restore necessary node modules.
