@@ -56,7 +56,7 @@ i {
 }
 
 .member-card {
-  width: 350px;
+  width: 400px;
   background-color: var(--aqua);
   box-shadow: 8px 12px 10px #616161;
   height: 330px;
