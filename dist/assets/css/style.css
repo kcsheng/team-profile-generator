@@ -1,0 +1,90 @@
+:root {
+  --orange: #ff6103;
+  --red: #cd3700;
+  --aqua: #03a89e;
+  --blue: #00688e;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: purple;
+}
+
+h1 {
+  font-size: 5rem;
+  background-color: var(--blue);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 5%;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+i {
+  margin-right: 5%;
+}
+
+.member-cards {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2%;
+}
+
+.member-card {
+  width: 350px;
+  background-color: var(--aqua);
+  box-shadow: 8px 12px 10px #616161;
+  height: 330px;
+  margin: 2%;
+  padding: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  height: 25%;
+}
+
+.position {
+  height: 25%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.id,
+.email,
+.extra-prop {
+  padding: 3%;
+}
