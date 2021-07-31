@@ -3,6 +3,7 @@ const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 const Team = require("./lib/team");
+const writeHTML = require("./src/generateHTML");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const employeesRawData = [];
@@ -66,11 +67,16 @@ const addEmployee = (position) =>
       } else if (data.further_action === "Add an intern.") {
         addEmployee("intern");
       } else {
-        console.log(employeesRawData);
+        const team = createTeam(employeesRawData);
+        createHTML("./dist/index.html", team);
       }
     })
     .catch((error) => console.error(error));
 
-// addEmployee("manager");
+const init = () => {
+  addEmployee("manager");
+};
+
+init();
 
 module.exports = { addEmployee, askQuestionsBy, createTeam };
