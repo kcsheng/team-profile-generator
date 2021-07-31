@@ -30,3 +30,7 @@ The entire App can be downloaded using git clone or zip method. Please run npm i
 [MIT](https://opensource.org/licenses/MIT)
 
 <h2 id="demo">Demo</h2>
+
+![demo of the app](./dist/assets/img/demo.gif)
+
+![screenshot of html result](./dist/assets/img/demo.png)
