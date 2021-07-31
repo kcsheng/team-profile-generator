@@ -18,11 +18,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: rgb(101, 0, 101);
 }
 
 a:hover {
-  color: purple;
+  color: var(--red);
 }
 
 h1 {

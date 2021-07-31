@@ -8,7 +8,7 @@ const writeHTML = (team) => {
     const role = member.position;
     const roleCap = capitalise(role);
     const uniqueKey = Object.keys(member)[4];
-    const uniqueKeyCap = capitalise(uiqueKey);
+    const uniqueKeyCap = capitalise(uniqueKey);
     const uniqueVal = member[uniqueKey];
     const uniqueLink =
       uniqueKey === `github`
