@@ -31,10 +31,10 @@ The entire App can be downloaded using git clone or zip method. Please run npm i
 
 <h2 id="demo">Demo</h2>
 
-Click [here](./dist/assets/img/demo.gif) to restart app demo in a separate window.
-![demo of the app](./dist/assets/img/demo.gif)
-Click [here](./dist/assets/img/demo.gif) to restart test demo in a separate window.
-![test demo of the app](./dist/assets/img/demo_test.gif)
+- App demo - click [here](./dist/assets/img/demo.gif) to restart app demo in a separate window.
+  ![demo of the app](./dist/assets/img/demo.gif)
+- Test demo - Click [here](./dist/assets/img/demo.gif) to restart test demo in a separate window.
+  ![test demo of the app](./dist/assets/img/demo_test.gif)
 
-HTML result sample
-![screenshot of html result](./dist/assets/img/demo.png)
+- HTML result sample
+  ![screenshot of html result](./dist/assets/img/demo.png)
